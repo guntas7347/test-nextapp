@@ -24,6 +24,9 @@ ENV DATABASE_URL=$DATABASE_URL
 ENV NODE_ENV=production
 
 RUN npx prisma generate
+
+RUN echo "DATABASE_URL=$DATABASE_URL"
+
 RUN npm run build
 
 # =====================================
